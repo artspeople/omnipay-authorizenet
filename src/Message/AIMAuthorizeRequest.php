@@ -41,10 +41,8 @@ class AIMAuthorizeRequest extends AIMAbstractRequest
         try {
             // Try trackData first
             $this->validate('track1');
-            $this->validate('track2');
 
             $data->transactionRequest->payment->trackData->track1 = $this->getTrack1();
-            $data->transactionRequest->payment->trackData->track2 = $this->getTrack2();
         } catch (InvalidRequestException $ire) {
             // Try creditCard data as normal
             $this->validate('card');

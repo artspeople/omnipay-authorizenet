@@ -40,7 +40,6 @@ class AIMAuthorizeRequestTest extends TestCase
         $this->assertEquals('example@example.net', $data->transactionRequest->customer->email);
         $this->assertEquals('SOL12345ID', $data->transactionRequest->solution->id);
         $this->assertEquals('track1Test', $data->transactionRequest->payment->trackData->track1);
-        $this->assertEquals('track2Test', $data->transactionRequest->payment->trackData->track2);
         $this->assertEquals('2', $data->transactionRequest->retail->marketType);
         $this->assertEquals('1', $data->transactionRequest->retail->deviceType);
 
